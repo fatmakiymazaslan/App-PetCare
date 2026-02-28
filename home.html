@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="home-page">
+
+    <header class="home-header">
+    <h1>🐾 PetCare</h1>
+    <button id="goSettingsBtn" class="icon-btn" title="Ayarlar">⚙️</button>
+</header>
+
+    <main class="main-content-container">
+
+        <section class="pet-section">
+            <h2>Evcil Hayvanlarınız</h2>
+            
+            <div class="pet-management-container">
+                
+                <div id="mainPetDisplay" class="main-display-card">
+                    
+                    <form class="pet-add" id="addPetForm" style="display: none;"> 
+                        <h3>Yeni Evcil Hayvan Ekle</h3>
+                        
+                        <div 
+                            class="pet-photo" 
+                            id="petPhotoDisplay"
+                            role="button" 
+                            aria-label="Evcil hayvan fotoğrafı yüklemek için tıkla">📷</div>
+                        
+                        <input type="file" id="petPhotoInputHome" accept="image/*" style="display:none;">
+                        <input type="text" id="petNameInputHome" placeholder="Evcil hayvanınızın ismini giriniz" required>
+                        
+                        <p id="petAddErrorMessage" class="error-text hidden"></p>
+
+                        <button type="submit" id="addPetBtnHome">✔ Evcil Hayvan Ekle</button>
+                    </form>
+                    
+                    </div>
+
+                <div class="side-pet-list">
+                    <h3>Diğer Dostlar</h3>
+                    <div id="sidePetList" class="pet-list-scroll">
+                        </div>
+                    <button id="showAddFormBtn" class="secondary-btn hidden">+ Yeni Pet Ekle</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Hızlı Erişim</h2>
+            <div class="menu-grid">
+                <button id="reminderBtn" class="menu-item primary">🔔 Hatırlatıcılar</button>
+                <button id="calendarBtn" class="menu-item accent">📅 Takvim</button>
+                <button id="foodWaterBtn" class="menu-item secondary">🍖💧 Mama & Su Takibi</button>
+                <button id="notesBtn" class="menu-item tertiary">📝 Notlar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Mama & Su Takibi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="food-water.css"> </head>
+<body class="food-water-page">
+
+    <header class="home-header">
+    <a href="home.html" class="simple-back-btn"> < </a>
+    <h1>🍖💧 Takip</h1>
+    <div class="header-placeholder"></div>
+</header>
+
+    <main class="main-content-container">
+
+        <section class="pet-selection-section">
+            <select id="petFoodWaterSelect">
+                <option value="" disabled selected>Evcil Hayvan Seç</option>
+                </select>
+        </section>
+
+        <section class="tracking-cards-section">
+            
+            <div id="foodCard" class="tracking-card food-card">
+                <div class="card-visual">
+                    <span class="bowl-icon">🥩</span> 
+                </div>
+                <h2>Mama</h2>
+                <div class="last-log" id="lastFoodLog">
+                    <p class="info-text">Henüz mama verilmedi.</p>
+                </div>
+                
+                <form class="log-form" data-type="food">
+                    <input type="datetime-local" required>
+                    <button type="submit">Mama Verildi (Kaydet)</button>
+                </form>
+            </div>
+
+            <div id="waterCard" class="tracking-card water-card">
+                <div class="card-visual">
+                    <span class="bowl-icon">💧</span>
+                </div>
+                <h2>Su</h2>
+                <div class="last-log" id="lastWaterLog">
+                    <p class="info-text">Henüz su verilmedi.</p>
+                </div>
+                
+                <form class="log-form" data-type="water">
+                    <input type="datetime-local" required>
+                    <button type="submit">Su Verildi (Kaydet)</button>
+                </form>
+            </div>
+
+        </section>
+
+        <section class="history-section hidden">
+            <h2>Geçmiş Kayıtlar (<span id="historyPetName"></span>)</h2>
+            <div id="logHistory" class="log-history">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="food-water.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Notlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notes.css"> </head>
+<body class="notes-page">
+
+   <header class="home-header">
+    <a href="home.html" class="simple-back-btn"> < </a>
+    <h1>📝 Notlar</h1>
+    <div class="header-placeholder"></div>
+</header>
+
+    <main class="main-content-container">
+
+        <section class="pet-selection-section">
+            <select id="petNotesSelect">
+                <option value="" disabled selected>Evcil Hayvan Seç</option>
+                </select>
+        </section>
+
+        <section class="add-note-section">
+            <h2>Yeni Not Ekle</h2>
+            <form id="addNoteForm">
+                <input type="text" id="noteTitle" placeholder="Not Başlığı (Örn: İlaç Dozajı, Alerji)" required>
+                <textarea id="noteContent" placeholder="Notun içeriği..." rows="5" required></textarea>
+                
+                <p id="noteErrorMessage" class="error-text hidden"></p>
+                <button type="submit">Notu Kaydet</button>
+            </form>
+        </section>
+
+        <section class="note-list-section">
+            <h2>Mevcut Notlar (<span id="currentPetNameDisplay">Seçiniz</span>)</h2>
+            <div id="notesList" class="notes-list">
+                <p class="info-text">Lütfen yukarıdan bir evcil hayvan seçiniz.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="notes.js"></script>
+</body>
+</html>

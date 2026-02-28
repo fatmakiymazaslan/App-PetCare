@@ -1,0 +1,171 @@
+/* ==================================== */
+/* FOOD-WATER SAYFASI ÖZEL STİLLERİ */
+/* ==================================== */
+
+.main-content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Evcil Hayvan Seçimi */
+.pet-selection-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#petFoodWaterSelect {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ff914d;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Takip Kartları (Görsel Bölüm) */
+.tracking-cards-section {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tracking-card {
+    flex: 1;
+    max-width: 350px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tracking-card h2 {
+    color: #4a90e2;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Mama ve Su Kaplarının Görsel Temsili */
+.card-visual {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 10px #f0f4f8; /* Dış halka efekti */
+}
+
+.food-card .card-visual {
+    background-color: #ff914d; /* Turuncu */
+}
+
+.water-card .card-visual {
+    background-color: #4a90e2; /* Mavi */
+}
+
+.bowl-icon {
+    font-size: 3.5em;
+    line-height: 1;
+}
+
+/* Son Kayıt Bilgisi */
+.last-log {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-height: 80px; /* Sabit yükseklik */
+}
+
+.last-log p {
+    margin: 5px 0;
+}
+
+.log-time-ago {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333;
+}
+
+.last-log.urgent {
+    background-color: #ffe8e8; /* Acil durum arka planı */
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}
+
+.last-log.urgent .log-time-ago {
+    color: #e74c3c;
+}
+
+/* Form Alanı */
+.log-form input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.log-form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.food-card button {
+    background-color: #ff7b22;
+}
+
+.water-card button {
+    background-color: #4a90e2;
+}
+
+.food-card button:hover {
+    background-color: #e66a1a;
+}
+
+.water-card button:hover {
+    background-color: #3f7bbf;
+}
+
+/* ==================================== */
+/* MOBİL UYUMLULUK (food-water.css) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    
+    /* Kartları Yan Yana Durmaktan Alt Alta Geçir */
+    .tracking-cards-section {
+        flex-direction: column; /* Yataydan dikeye geçiş */
+        gap: 20px; /* Aralarındaki boşluğu azalt */
+        align-items: center; /* Merkezi hizalama */
+    }
+
+    /* Kartların Tam Genişlik Kullanmasını Sağla */
+    .tracking-card {
+        width: 100%; /* Tam genişlik */
+        max-width: 400px; /* Maksimum genişliği kısıtla */
+        padding: 20px; /* İç boşluğu azalt */
+    }
+    
+    /* Header'daki Geri Butonu ve Başlık Ayarı (Genellikle gerekli olur) */
+    .home-header {
+        flex-direction: row;
+        /* Geri butonu için esneklik ver */
+        grid-template-columns: auto 1fr auto; 
+    }
+
+    /* Log Form Input Genişliği */
+    .log-form input[type="datetime-local"] {
+        width: 100%;
+    }
+}

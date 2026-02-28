@@ -1,0 +1,209 @@
+/* ==================================== */
+/* CALENDAR SAYFASI ÖZEL STİLLERİ */
+/* ==================================== */
+
+.main-content-container {
+    max-width: 900px; /* Takvim için biraz daha geniş alan */
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Evcil Hayvan Seçimi */
+.calendar-controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#petCalendarSelect {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ff914d;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Takvim Başlık ve Kontrolleri */
+.calendar-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    color: #4a90e2;
+}
+
+.calendar-header button {
+    width: auto;
+    padding: 8px 15px;
+    margin: 0;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    color: #4a90e2;
+    font-weight: 600;
+}
+
+/* Takvim Grid Yapısı */
+.calendar-grid-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-weekdays span {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.day {
+    padding: 15px 5px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    position: relative;
+    min-height: 50px;
+}
+
+.day:hover:not(.empty) {
+    background-color: #f0f4f8;
+}
+
+.day.empty {
+    background-color: #fafafa;
+    cursor: default;
+}
+
+.day.today {
+    border: 2px solid #ff914d;
+    font-weight: bold;
+    color: #ff914d;
+}
+
+.day.selected {
+    background-color: #ffe0c7; /* Seçili gün rengi */
+    border: 2px solid #ff7b22;
+}
+
+.day.has-event {
+    /* Olay olan günler için minik bir nokta */
+    background-color: #e6f0ff;
+}
+
+.day.has-event::after {
+    content: '•';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff914d;
+    font-size: 2em;
+    line-height: 0;
+}
+
+
+/* Olay Ekleme Formu */
+.event-form-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#addCalendarEventForm input[type="text"], 
+#addCalendarEventForm select,
+#addCalendarEventForm textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Seçili Gün Olayları Listesi */
+.events-list-section h3 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.day-events-list {
+    margin-top: 15px;
+}
+
+.event-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.event-item.vaccine {
+    border-left: 5px solid #2ecc71; /* Yeşil - Aşı */
+    background-color: #f1fcf5;
+}
+
+.event-item.appointment {
+    border-left: 5px solid #e74c3c; /* Kırmızı - Randevu */
+    background-color: #fcf1f1;
+}
+
+.event-item.medication {
+    border-left: 5px solid #9b59b6; /* Mor - İlaç */
+    background-color: #f7f3f9;
+}
+
+.event-item.other {
+    border-left: 5px solid #f1c40f; /* Sarı - Diğer */
+    background-color: #fffde7;
+}
+
+.event-item h4 {
+    margin: 0 0 5px;
+    font-size: 1.1em;
+}
+
+.event-item p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.delete-event-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.delete-event-btn:hover {
+    color: #e74c3c;
+}

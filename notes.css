@@ -1,0 +1,131 @@
+/* ==================================== */
+/* NOTES SAYFASI ÖZEL STİLLERİ */
+/* ==================================== */
+
+.main-content-container {
+    max-width: 700px; 
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Evcil Hayvan Seçimi */
+.pet-selection-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#petNotesSelect {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #ff914d;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Yeni Not Ekleme Formu */
+.add-note-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.add-note-section h2 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+#addNoteForm input[type="text"], 
+#addNoteForm textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#addNoteForm textarea {
+    resize: vertical;
+}
+
+/* Not Listesi */
+.note-list-section h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#currentPetNameDisplay {
+    color: #ff914d;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.note-card {
+    background: #fff;
+    border-left: 6px solid #b39ddb; /* Mor Vurgu */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.note-card:hover {
+    background-color: #f7f3f9;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 5px;
+}
+
+.note-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.note-date {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.note-content {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+    white-space: pre-wrap; /* Satır atlamaları korur */
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff5757; 
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: #d43b3b;
+    transform: scale(1.1);
+}

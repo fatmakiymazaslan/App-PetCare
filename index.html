@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Giriş</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <h1>🐾Pet<span class="highlight">Care</span></h1>
+        <p>Hoş geldiniz! Giriş yapın</p>
+
+        <form id="loginForm"> 
+
+            <label for="loginUsername" class="visually-hidden">Kullanıcı Adı</label>
+            <input type="text" id="loginUsername" placeholder="Kullanıcı Adı" required>
+
+            <label for="loginPassword" class="visually-hidden">Şifre</label>
+            <input type="password" id="loginPassword" placeholder="Şifre" required>
+
+            <p id="loginErrorMessage" class="error-text hidden"></p>
+
+            <button type="submit" id="loginBtn">Giriş Yap</button>
+
+        </form>
+
+        <p class="signup-text">
+            Hesabın yok mu? <a href="#" id="goSignup">Kaydol</a> </p>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="auth.js"></script> 
+</body>
+</html>

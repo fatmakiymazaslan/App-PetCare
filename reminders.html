@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Hatırlatıcılar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reminders.css"> </head>
+<body class="reminders-page">
+
+<header class="home-header">
+    <a href="home.html" class="simple-back-btn"> < </a>
+    <h1>🔔 Hatırlatıcılar</h1>
+    <div class="header-placeholder"></div>
+</header>
+    <main class="main-content-container">
+
+        <section class="reminder-form-section">
+            <h2>Yeni Hatırlatıcı Ekle</h2>
+            
+            <form id="addReminderForm" class="pet-add"> 
+                
+                <select id="petSelect" required>
+                    <option value="" disabled selected>Hangi Evcil Hayvan İçin?</option>
+                    </select>
+
+                <input type="text" id="reminderTitle" placeholder="Hatırlatıcı Başlığı (Aşı, İlaç, Randevu)" required>
+
+                <input type="datetime-local" id="reminderDateTime" required>
+
+                <textarea id="reminderNotes" placeholder="Ek Notlar (İsteğe bağlı)"></textarea>
+
+                <p id="reminderErrorMessage" class="error-text hidden"></p>
+
+                <button type="submit" id="saveReminderBtn">Hatırlatıcıyı Kaydet</button>
+
+            </form>
+        </section>
+
+        <section class="reminder-list-section">
+            <h2>Yaklaşan Hatırlatıcılar</h2>
+            <div id="reminderList" class="reminder-list">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="reminders.js"></script>
+</body>
+</html>

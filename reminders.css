@@ -1,0 +1,162 @@
+/* ==================================== */
+/* REMINDERS SAYFASI ÖZEL STİLLERİ */
+/* ==================================== */
+
+.reminders-page .home-header {
+    /* Başlık ve Geri Butonu Düzeni */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4a90e2; /* Mavi renk */
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #ff914d; /* Turuncu vurgu */
+}
+
+.back-icon {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.header-placeholder {
+    /* Header'daki h1'i ortalamak için boş div */
+    width: 0; 
+}
+
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Hatırlatıcı Formu */
+.reminder-form-section {
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.reminder-form-section h2 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+#addReminderForm input[type="text"], 
+#addReminderForm input[type="datetime-local"], 
+#addReminderForm select,
+#addReminderForm textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#addReminderForm textarea {
+    resize: vertical;
+}
+
+/* Hatırlatıcı Listesi */
+.reminder-list-section {
+    width: 100%;
+}
+
+.reminder-list-section h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.reminder-card {
+    background: #fff;
+    border-left: 6px solid #4a90e2; /* Mavi Vurgu */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.reminder-card:hover {
+    transform: translateX(5px);
+}
+
+.reminder-card.is-past {
+    border-left-color: #aaa; /* Geçmiş hatırlatıcı için daha soluk renk */
+    opacity: 0.7;
+}
+
+.reminder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.reminder-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.pet-name-tag {
+    background-color: #ffe0c7;
+    color: #ff7b22;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.reminder-time {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.reminder-notes {
+    font-size: 0.95em;
+    color: #555;
+    border-top: 1px dashed #eee;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #ff5757; 
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: #d43b3b;
+    transform: scale(1.1);
+}

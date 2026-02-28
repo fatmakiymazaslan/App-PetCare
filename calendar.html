@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Takvim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calendar.css"> </head>
+<body class="calendar-page">
+
+ <header class="home-header">
+    <a href="home.html" class="simple-back-btn"> < </a>
+    <h1>📅 Takvim</h1>
+    <div class="header-placeholder"></div>
+</header>
+
+    <main class="main-content-container">
+
+        <section class="calendar-controls">
+            <select id="petCalendarSelect">
+                <option value="" disabled selected>Evcil Hayvan Seç</option>
+                </select>
+        </section>
+        
+        <section class="calendar-section">
+            
+            <div class="calendar-header">
+                <button id="prevMonthBtn">← Önceki</button>
+                <h2 id="currentMonthYear">Ay Yıl</h2>
+                <button id="nextMonthBtn">Sonraki →</button>
+            </div>
+            
+            <div class="calendar-grid-container">
+                <div class="calendar-weekdays">
+                    <span>Paz</span>
+                    <span>Pzt</span>
+                    <span>Sal</span>
+                    <span>Çar</span>
+                    <span>Per</span>
+                    <span>Cum</span>
+                    <span>Cmt</span>
+                </div>
+                
+                <div id="calendarDaysGrid" class="calendar-days">
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="event-form-section">
+            <h2 id="eventFormTitle">Olay Ekle</h2>
+            <form id="addCalendarEventForm">
+                <input type="hidden" id="selectedDateInput">
+                <input type="text" id="eventTitle" placeholder="Olay Başlığı (Aşı, Veteriner Randevusu)" required>
+                
+                <select id="eventTypeSelect" required>
+                    <option value="" disabled selected>Olay Tipi Seç</option>
+                    <option value="vaccine">Aşı</option>
+                    <option value="appointment">Randevu</option>
+                    <option value="medication">İlaç</option>
+                    <option value="other">Diğer</option>
+                </select>
+
+                <textarea id="eventNotes" placeholder="Detaylar (İsteğe bağlı)"></textarea>
+                
+                <p id="calendarErrorMessage" class="error-text hidden"></p>
+                <button type="submit">Olayı Kaydet</button>
+            </form>
+        </section>
+
+        <section class="events-list-section">
+            <h3>Seçili Gün Olayları: <span id="selectedDateDisplay"></span></h3>
+            <div id="dayEventsList" class="day-events-list">
+                <p class="info-text">Lütfen takvimden bir gün seçiniz.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Ayarlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body class="settings-page">
+
+  <header class="home-header">
+    <a href="home.html" class="simple-back-btn"> < </a>
+    <h1>⚙️ Ayarlar</h1>
+    <div class="header-placeholder"></div>
+</header>
+
+    <main class="main-content-container">
+
+        <section class="settings-section">
+            <h2>Kullanıcı Adını Değiştir</h2>
+            <form id="changeUsernameForm">
+                <input type="text" id="newUsername" placeholder="Yeni Kullanıcı Adı" required>
+                <p id="usernameErrorMessage" class="error-text hidden"></p>
+                <p id="usernameSuccessMessage" class="success-text hidden"></p>
+                <button type="submit" class="primary-btn">Kullanıcı Adını Güncelle</button>
+            </form>
+        </section>
+
+        <section class="settings-section">
+            <h2>Şifreni Değiştir</h2>
+            <form id="changePasswordForm">
+                <input type="password" id="currentPassword" placeholder="Mevcut Şifreniz" required>
+                <input type="password" id="newPassword" placeholder="Yeni Şifreniz" required>
+                <p id="passwordErrorMessage" class="error-text hidden"></p>
+                <p id="passwordSuccessMessage" class="success-text hidden"></p>
+                <button type="submit" class="primary-btn">Şifreyi Güncelle</button>
+            </form>
+        </section>
+
+        <section class="settings-section logout-section">
+            <button id="logoutBtn" class="danger-btn">🚪 Hesaptan Çıkış Yap</button>
+        </section>
+
+    </main>
+
+    <script src="utils.js"></script> 
+    <script src="settings.js"></script>
+</body>
+</html>

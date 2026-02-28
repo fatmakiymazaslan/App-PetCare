@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Kaydol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <h1>🐾Pet<span class="highlight">Care</span></h1>
+        <p>Hesap oluşturun</p>
+
+        <form id="signupForm"> 
+
+            <label for="signupFullName" class="visually-hidden">Ad Soyad</label>
+            <input type="text" id="signupFullName" placeholder="Ad Soyad" required>
+
+            <label for="signupEmail" class="visually-hidden">E-mail</label>
+            <input type="email" id="signupEmail" placeholder="E-mail" required>
+
+            <label for="signupUsername" class="visually-hidden">Kullanıcı Adı</label>
+            <input type="text" id="signupUsername" placeholder="Kullanıcı Adı" required>
+
+            <label for="signupPassword" class="visually-hidden">Şifre</label>
+            <input type="password" id="signupPassword" placeholder="Şifre" required>
+
+            <p id="signupErrorMessage" class="error-text hidden"></p>
+
+            <button type="submit" id="signupBtn">Kaydol</button>
+
+        </form>
+
+        <p class="signup-text">
+            Zaten hesabınız var mı? <a href="#" id="goLogin">Giriş Yap</a>
+        </p>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
